@@ -9,12 +9,28 @@
     
 </body>
 <script type="text/javascript">
+fetch('data.json')
+.then(function(response){
+    //raw data
+    //into json
+    return response.json();
+}
+)
+.then(function(data){
+    //json obj to work with
+    console.log(data);
+}
+)
+.catch(function(err){
+    //will be called if there is an error
+    console.log(err);
+})
 /**
 * We are going to start with AJAX by learning fetch.
 *
 * Using the basic fetch syntax:
 *
-* fetch('some/url')
+fetch('some/url')
 * .then(function(response) {
 *     
 * }).catch(function(err) {
@@ -28,6 +44,8 @@
 * 4. console.log the error, what do you see?
 *
 **/
+
+
 
 </script>
 </html>
